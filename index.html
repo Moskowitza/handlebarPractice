@@ -11,16 +11,18 @@
 
 <body>
     <h1>Super Heroes</h1>
-    <ol class="character-list-container"></ol>
+    <ul class="character-list-container"></ul>
     <!-- Handlebars Magic -->
     <script id="character-template" type="text/x-handlebars-template">
+      {{#each characters}}
         <li class="characters">
             <img src="images/{{shortCode}}.jpeg">
             <h2>Hero: {{name}} </h2>
+            <p>index position {{@index}}</p>
             <p>Secret Identity: {{realName}} </p>
             <p>Team: {{team}} </p>
         </li>
-        
+        {{/each}}
         </script>
 
     <script src="js/jquery-3.3.1.min.js"></script>
