@@ -1,54 +1,16 @@
-var cast = {
-    "characters":[
-        {
-            "name":"Dark Phoenix",
-            "shortCode":"dark-phoenix",
-            "realName":"Jean Grey",
-            "team":"X-men"
-        },
-        {
-            "name":"Spider-Man",
-            "shortCode":"spider-man",
-            "realName":"Peter Parker",
-            "team": undefined
-        },
-        {
-            "name":"Iron Man",
-            "shortCode":"iron-man",
-            "realName":"Tony Stark",
-            "team":"Avengers"
-        },
-        {
-            "name":"Cyclops",
-            "shortCode":"cyclops",
-            "realName":"Scott Summers",
-            "team":"X-men"
-        },
-        {
-            "name":"Hulk",
-            "shortCode":"hulk",
-            "realName":"Bruce Banner",
-            "team":"Avengers"
-        },
-        {
-            "name":"Moon Knight",
-            "shortCode":"moon-knight",
-            "realName":"Marc Spector",
-            "team":undefined
-        },
-        {
-            "name":"Daredevil",
-            "shortCode":"daredevil",
-            "realName":"Matt Murdock",
-            "team": undefined
-        }
-    ]
-}
-$(document).ready(function(){
-var characterTemplate = $("#character-template").html();
-
-var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
-
-$(".character-list-container").html(compiledCharacterTemplate(cast))
-
+// Handlebars.registerHelper("formatName", function (prop1, prop2) {
+//     return new Handlebars.SafeString("It's <strong>" + prop1 + "</strong> but my friends call me<strong>" + prop2 + "</strong>");
+// });
+// Handlebars.registerHelper("formatPhoneNumber", function (prop) {
+//     if (prop) {
+//         var phone = prop.toString();
+//         return "(" + phone.subStr(0, 3) + ") " + phone.substr(3, 3) + "-" + phone.substr(6, 4)
+//     }
+// });
+$(document).ready(function () {
+    var characterTemplate = $("#character-template").html();
+    var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+    $.ajax("./data/cast.json").done(function (cast) {
+        $(".character-list-container").html(compiledCharacterTemplate(cast))
+    });
 });
