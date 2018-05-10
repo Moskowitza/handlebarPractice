@@ -10,7 +10,7 @@ var cast = {
             "name":"Spider-Man",
             "shortCode":"spider-man",
             "realName":"Peter Parker",
-            "team":"none"
+            "team": undefined
         },
         {
             "name":"Iron Man",
@@ -23,6 +23,24 @@ var cast = {
             "shortCode":"cyclops",
             "realName":"Scott Summers",
             "team":"X-men"
+        },
+        {
+            "name":"Hulk",
+            "shortCode":"hulk",
+            "realName":"Bruce Banner",
+            "team":"Avengers"
+        },
+        {
+            "name":"Moon Knight",
+            "shortCode":"moon-knight",
+            "realName":"Marc Spector",
+            "team":undefined
+        },
+        {
+            "name":"Daredevil",
+            "shortCode":"daredevil",
+            "realName":"Matt Murdock",
+            "team": undefined
         }
     ]
 }

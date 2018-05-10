@@ -20,7 +20,8 @@
             <h2>Hero: {{name}} </h2>
             <p>index position {{@index}}</p>
             <p>Secret Identity: {{realName}} </p>
-            <p>Team: {{team}} </p>
+            {{#if team}}<p>Team:  {{team}}  </p> {{/if}}
+             {{#unless team}} <p>Unaffiliated</p> {{/unless}}
         </li>
         {{/each}}
         </script>
