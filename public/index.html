@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Handlebars</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <script id="character-template" type="text/x-handlebars-template">
       {{#each characters}}
         <li class="characters">
-            <img src="images/{{shortCode}}.jpeg">
+            <img src="../images/{{shortCode}}.jpeg">
             <h2>Hero: {{name}} </h2>
             {{formatName}}
             <p>index position {{@index}}</p>
@@ -27,9 +29,13 @@
         {{/each}}
         </script>
 
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/handlebars-v4.0.11.js"></script>
-    <script src="../js/scripts.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+        <script src="../data/cast.js"></script>
+        <script src="../js/scripts.js"></script>
+        
 </body>
 
 </html>

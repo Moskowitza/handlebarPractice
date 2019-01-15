@@ -20,15 +20,13 @@
 //     );
 //   }
 // });
-console.log("script loaded");
 
 $(document).ready(function() {
-  event.preventDefault();
   var characterTemplate = $("#character-template").html();
-  var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+  console.log(characterTemplate);
 
-  $.ajax("./data/cast.js").done(function(cast) {
-    console.log(cast);
-  });
-  // $(".character-list-container").html(compiledCharacterTemplate(cast))
+  var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+  console.log(compiledCharacterTemplate);
+  $(".character-list-container").html(compiledCharacterTemplate(cast));
+  console.log(cast.characters);
 });
